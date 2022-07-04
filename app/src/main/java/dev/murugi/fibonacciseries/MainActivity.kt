@@ -15,20 +15,20 @@ class MainActivity : AppCompatActivity() {
     }
     fun displays(){
         var fibonacciList = fibonacci(100)
-        var fibiAdapter = FibonacciRecyclerViewAdapter(fibonacciList)
+        var fibAdapter = FibonacciRecyclerViewAdapter(fibonacciList)
 
         binding.rvFibonacci.layoutManager = LinearLayoutManager(this)
-        binding.rvFibonacci.adapter = fibiAdapter
+        binding.rvFibonacci.adapter = fibAdapter
     }
-    fun fibonacci(n: Int):List<Int> {
+    fun fibonacci(num: Int):List<Int> {
         var currentNumber = 0
-        var prevNumber = 1
+        var previousNumber = 1
 
         var fibonacciList = ArrayList<Int>()
         var firstNumber = 0
         var secondNumber = 1
         var counter = 0
-        while (counter<n){
+        while (counter<num){
             println(firstNumber)
             val sum = firstNumber + secondNumber
             firstNumber = secondNumber
